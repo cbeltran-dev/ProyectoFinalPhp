@@ -1,0 +1,73 @@
+
+.cinemas.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cinema-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: space-between;
+}
+
+.cinema-card {
+    width: calc(50% - 20px); /* Ancho del 50% menos el doble del espacio entre las tarjetas */
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Asegura que la imagen ocupe el espacio adecuado*/
+}
+
+.cinema-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+    object-fit: cover; /* Ajusta la imagen sin distorsionar su relación de aspecto */
+    flex-grow: 1; /* Permite que la imagen ocupe todo el espacio vertical disponible */
+}
+
+.cinema-card .cinema-info {
+    padding: 20px;
+}
+
+.cinema-card .cinema-info h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.cinema-card .cinema-info p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.cinema-card .cinema-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cinema-card .cinema-info ul li {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+@media (max-width: 992px) {
+    .cinema-card {
+        width: calc(50% - 10px); /* Ancho del 50% en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    .cinema-card {
+        width: calc(100% - 10px); /* Ancho completo en dispositivos móviles */
+    }
+}
+
