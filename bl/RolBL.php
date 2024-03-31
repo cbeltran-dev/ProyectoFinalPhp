@@ -32,15 +32,7 @@ class RolBL {
         }
     }
     
-    function actualizar($rol){
-        $dao=new RolDAO();
-        try{
-            $dao->actualizarRol($rol);
-        } catch (Exception $ex) {
-            echo $ex->getMessage();
-
-        }
-    }
+    
     
     function eliminar($id){
         $dao = new RolDAO();
