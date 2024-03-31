@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="stylelogin.css">
-    <link rel="stylesheet" href="../../css/stylelogin.css">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../stylelogin.css">
+    <link rel="stylesheet" href="../../../css/stylelogin.css">
+    <link rel="stylesheet" href="../../../css/style.css">
 </head>
 <body>
 
 <div class="login-container">
     <h2>Iniciar Sesión</h2>
-    <form action="procesar_login.php" method="POST">
+    <form action="Procesarlogin.php" method="POST">
         <div class="form-group">
             <label for="username">Usuario:</label>
             <input type="text" id="username" name="username" required>
