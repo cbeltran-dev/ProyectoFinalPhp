@@ -18,5 +18,14 @@ class ConexionDAO {
             die();
         }
     }
+    
+    public function cerrarConexion() {
+        
+        if ($this->conexion !== null) {
+            
+            $this->conexion = null;
+        }
+    }
+
 }
 
