@@ -49,9 +49,9 @@
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) :
                     ?>  
                     <?php if ($count % 4 == 0) : ?>
-                        <div class="cinema-row"> <!-- Crear una nueva fila para cada 4 películas -->
+                        <div class="cinema-row"> 
                         <?php endif; ?>
-                        <div class="cinema-box"> <!-- Contenedor de caja para cada película -->
+                        <div class="cinema-box"> 
                             <div class="cinema-card">
                                 <img src="<?php echo $row['imagen_url']; ?>" alt="<?php echo $row['titulo']; ?>">
                                 <div class="cinema-info">
@@ -65,11 +65,11 @@
                         </div> 
                         <?php $count++; ?>
                         <?php if ($count % 4 == 0) : ?>
-                        </div> <!-- Cerrar la fila después de cada 4 películas -->
+                        </div> 
                     <?php endif; ?>
                 <?php endwhile; ?>    
                 <?php if ($count % 4 != 0) : ?>
-                </div> <!-- Cerrar la fila si no hay un número exacto de películas -->
+                </div> 
             <?php endif; ?>               
         </div>
         <div class="load-more" id="load-more-1">Cargar más</div>
