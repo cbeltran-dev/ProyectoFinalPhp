@@ -23,7 +23,7 @@
         </header>
         <div class="menu__side" id="menu_side">
             <div class="name__page">
-                <a href="http://localhost:8080/ProyectoFinalPhp/VIEWS/Administrador/PagePrincipal.php"><i  class="fab fa-youtube"></i></a>
+                <a href="./PagePrincipal.php"><i  class="fab fa-youtube"></i></a>
                 <h4>CINE SISE</h4>
             </div>
             <div class="options__menu">           
@@ -60,7 +60,7 @@
             </div>
         </div>
         <main>
-            <img src="../../image/logocine.jpg">
+            <img src="../../images/logocine.jpg">
         </main>
         <script src="../../js/scrip_index3.js"></script>
     </body>
