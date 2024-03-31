@@ -41,14 +41,6 @@ class RolBL {
         }
     }
     
-    function eliminar($id){
-        $dao = new PeliculaDAO();
-        try{
-            $dao->eliminar($id);
-        } catch (Exception $ex) {
-            echo $ex->getMessage();
-
-        }
-    }
+ 
 
 }
