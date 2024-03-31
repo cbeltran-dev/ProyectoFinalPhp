@@ -24,7 +24,7 @@
                         <li><a href="#">CONTACTO</a></li>
                     </ul>
                 </nav>
-                <a href="VIEWS/Cliente/Login.php" class="btn-1">Login</a>
+                <a href="VIEWS/Cliente/Login/Login.php" class="btn-1">Login</a>
             </div>
             <div class="header-content container">
                 <div class="header-1">
