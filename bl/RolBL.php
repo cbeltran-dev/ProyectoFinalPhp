@@ -31,15 +31,7 @@ class RolBL {
 
         }
     }
-     function actualizar($pelicula){
-        $dao=new PeliculaDAO();
-        try{
-            $dao->actualizar($pelicula);
-        } catch (Exception $ex) {
-            echo $ex->getMessage();
-
-        }
-    }
+    ola desde git 
     
  
 
