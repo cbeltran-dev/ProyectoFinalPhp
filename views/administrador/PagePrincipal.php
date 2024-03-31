@@ -15,11 +15,12 @@
     </head>
     <body id="body">
         <header>
-
-            <div class="icon__menu">
+            <div class="icon__menu" >
                 <i class="fas fa-bars" id="btn_open"></i>
             </div>
-
+            <div class="icon__menu2"  >  
+                <i class="fa-solid fa-user " ></i>
+            </div>
         </header>
         <div class="menu__side" id="menu_side">
             <div class="name__page">
@@ -60,7 +61,7 @@
             </div>
         </div>
         <main>
-            <img src="../../images/logocine.jpg">
+            <img src="">
         </main>
         <script src="../../js/scrip_index3.js"></script>
     </body>
