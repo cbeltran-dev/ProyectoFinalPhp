@@ -25,7 +25,7 @@
 
         <div class="options"><br>
             <a href="Registrarse.php">Registrarse</a> <br>
-            <a href="Cambiarcontrasena.php">Olvidé mi contraseña</a>
+            <a href="../Cambiarcontrasena.php">Olvidé mi contraseña</a>
         </div>
     </form>
 </div>

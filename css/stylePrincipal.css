@@ -1,0 +1,143 @@
+/* Estilos generales */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Color de fondo */
+}
+
+header {
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color de texto del encabezado */
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos del banner principal */
+
+#banner {
+    background-color: #666; /* Color de fondo del banner */
+    color: #fff; /* Color de texto del banner */
+    text-align: center;
+    padding: 50px 0;
+}
+
+#banner h2 {
+    margin-top: 0;
+}
+
+#banner button {
+    background-color: #ff6600; /* Color de fondo del botón */
+    color: #fff; /* Color de texto del botón */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Estilos de la cartelera */
+
+#cartelera {
+    padding: 20px;
+}
+
+.pelicula {
+    background-color: #fff; /* Color de fondo de las películas */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.pelicula img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+}
+
+.pelicula h3 {
+    margin-top: 10px;
+}
+
+.pelicula ul {
+    margin: 10px 0;
+    padding: 0;
+}
+
+.pelicula ul li {
+    list-style-type: none;
+}
+
+/* Estilos del carrusel de próximos estrenos */
+
+#estrenos {
+    padding: 20px;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+}
+
+.slide {
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.slide h3 {
+    margin-top: 10px;
+}
+
+.slide p {
+    margin: 5px 0;
+}
+
+/* Estilos del pie de página */
+
+footer {
+    background-color: #333; /* Color de fondo del pie de página */
+    color: #fff; /* Color de texto del pie de página */
+    padding: 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}

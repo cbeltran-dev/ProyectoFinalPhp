@@ -1,0 +1,35 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 31 mar 2024, 18:40:47
+    Author     : HOME
+*/
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slide {
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 0 10px; /* Añade un espacio entre las diapositivas */
+    text-align: center;
+}
+
+.slide img {
+    max-width: 100%; /* Asegura que las imágenes se ajusten al ancho del contenedor */
+    height: auto; /* Mantén la proporción de aspecto de las imágenes */
+    border-radius: 5px; /* Opcional: agrega bordes redondeados a las imágenes */
+}
+
+.slide h3 {
+    margin-top: 10px; /* Espacio entre el título y la imagen */
+}
+
+.slide p {
+    margin: 5px 0; /* Espacio entre los párrafos */
+}

@@ -31,16 +31,8 @@ class RolBL {
 
         }
     }
+ 
     
-    
-    
-    function eliminar($id){
-        $dao = new RolDAO();
-        try{
-            $dao->eliminarRol($id);
-        } catch (Exception $ex) {
-            echo $ex->getMessage();
+ 
 
-        }
-    }
 }
