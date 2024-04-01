@@ -14,6 +14,22 @@
         <SCript src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></SCript>
     </head>
     <body id="body">
+        <style>
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            padding: 10px; 
+        }
+
+        .icon__menu {
+            margin-right: 10px;
+        }
+
+        .icon__menu2 {
+            margin-left: 1150px; 
+        }
+    </style>
         <header>
             <div class="icon__menu" >
                 <i class="fas fa-bars" id="btn_open"></i>
@@ -61,7 +77,7 @@
             </div>
         </div>
         <main>
-            <img src="">
+            
         </main>
         <script src="../../js/scrip_index3.js"></script>
     </body>
