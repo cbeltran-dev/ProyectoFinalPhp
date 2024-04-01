@@ -1,6 +1,6 @@
 <?php
 
-class ObtenerPeliculas {
+class ObtenerPeliculas{
 
     function obtenerPelis()
     {
@@ -11,7 +11,7 @@ class ObtenerPeliculas {
         } catch (PDOException $e) {
             die("Error al conectar: " . $e->getMessage());
         }
-        $query = "SELECT id_pelicula, titulo, genero, sinopsis,duracion,clasificacion,imagen_url FROM pelicula";
+        $query = "SELECT id_pelicula, titulo, genero, sinopsis,duracion,clasificacion,imagen_url FROM pelicula WHERE estado=1";
         $stmt = $pdo->query($query);
         return $stmt;
     }
