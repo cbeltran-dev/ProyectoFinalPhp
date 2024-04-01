@@ -10,7 +10,7 @@
     <body>
         <header class="header">
             <div class="menu container">
-                <a href="index.php" class="logo">CINE METROPOLITANO</a>
+                <a href="index.php" class="logo">CINE SISE</a>            
                 <input type="checkbox" id="menu" />
                 <label for="menu">
                     <img src="images/menu.png" class="menu-icono" alt="menu">
@@ -45,8 +45,10 @@
             <div class="cinema-grid">
                 <?php
                 include './dao/ObtenerPeliculas.php';
+                $objObpeli = new ObtenerPeliculas();
+                $funcObtenerPelis = $objObpeli->obtenerPelis();
                 $count = 0; // Contador para determinar cada 4 películas
-                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) :
+                while ($row = $funcObtenerPelis->fetch(PDO::FETCH_ASSOC)) :
                     ?>  
                     <?php if ($count % 4 == 0) : ?>
                         <div class="cinema-row"> 

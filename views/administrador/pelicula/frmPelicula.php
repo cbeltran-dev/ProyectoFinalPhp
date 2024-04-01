@@ -21,10 +21,10 @@
         </header>
         <div class="menu__side" id="menu_side">
             <div class="name__page">
-               <a href="../PagePrincipal.php"><i  class="fab fa-youtube"></i></a>
+                <a href="../PagePrincipal.php"><i  class="fab fa-youtube"></i></a>
                 <h4>CINE SISE</h4>
             </div>
-           <div class="options__menu">           
+            <div class="options__menu">           
                 <a href="../pelicula/frmPelicula.php" class ="selected">
                     <div class="option">
                         <i class="fas fa-home" title="pelicula"></i>
@@ -89,6 +89,15 @@
                         <label for="clasificacion" class="col-sm-2 col-form-label">Clasificación:</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="clasificacion" name="clasificacion" placeholder="Ingresar Clasificación" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="cboEstreno" class="col-sm-2 col-form-label">Estreno:</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" id="cboEstreno" name="cboEstreno" style="width: 80px">
+                                <option value="1">Si</option>
+                                <option value="0">No</option>            
+                            </select>
                         </div>
                     </div>
                     <div class="form-group row">
