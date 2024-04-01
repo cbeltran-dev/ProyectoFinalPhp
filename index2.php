@@ -2,10 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado de Cines</title>
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="../../css/stylecines.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CineMtropolitano</title>
+        <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="header">
@@ -34,19 +33,24 @@
         <div class="cinema-grid">
               <?php
             include './dao/ObtenerPeliculas.php';
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) : ?>  
+            $objPeliculas = new ObtenerPeliculas();
+            $lstPeliculas = $objPeliculas ->obtenerPelis();
+            while ($row = $lstPeliculas->fetch(PDO::FETCH_ASSOC)) : ?>  
             <div class="cinema-card">
-                <div class="cinema-grid">                    
+                <div class="cinema-grid">            
                     <img src="<?php echo $row['imagen_url']; ?>" alt="<?php echo $row['titulo']; ?>">
                     <div class="cinema-info">
+
                         <h3><?php echo $row['titulo']; ?></h3>
                         <p>Genero: <?php echo $row['genero']; ?></p>
                         <p>Duracion: <?php echo $row['duracion']; ?></p>
                         <p>Clasificacion: <?php echo $row['clasificacion']; ?></p>
+                        <h3>Género: <?php echo $row['genero']; ?></h3>                       
+                        <p>Duración: <?php echo $row['duracion']; ?></p>
+                        <p>Clasificación: <?php echo $row['clasificacion']; ?></p>
                     </div>
                 </div>                   
-                </div> 
-            
+                </div>           
             <?php endwhile; ?>                   
         </div>
     </section>

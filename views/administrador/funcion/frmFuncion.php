@@ -64,7 +64,7 @@
                     <div class="form-group row">
                         <label for="sucursal" class="col-sm-2 col-form-label">Sala:</label>
                         <div class="col-sm-10">
-                            <select class="form-control" aria-label="cboSala" name="cboSala" >
+                            <select class="form-control" aria-label="cboSala" name="cboSala"  >
                                 <option>Seleccionar Sala</option>
                                 <?php
                                 include_once '../../../bl/SalaBL.php';
