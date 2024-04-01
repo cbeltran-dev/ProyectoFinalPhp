@@ -10,7 +10,7 @@
     <body>
         <header class="header">
             <div class="menu container">
-                <a href="index.php" class="logo">CINE METROPOLITANO</a>
+                <h1 href="index.php" class="logo">CINE METROPOLITANO</h1>
                 <input type="checkbox" id="menu" />
                 <label for="menu">
                     <img src="images/menu.png" class="menu-icono" alt="menu">

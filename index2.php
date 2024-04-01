@@ -39,9 +39,10 @@
                 <div class="cinema-grid">                    
                     <img src="<?php echo $row['imagen_url']; ?>" alt="<?php echo $row['titulo']; ?>">
                     <div class="cinema-info">
-                        <h3><?php echo $row['genero']; ?></h3>
-                        <p>Dirección: <?php echo $row['descripcion']; ?></p>
-                        <p>Teléfono: <?php echo $row['horario']; ?></p>
+                        <h3><?php echo $row['titulo']; ?></h3>
+                        <p>Genero: <?php echo $row['genero']; ?></p>
+                        <p>Duracion: <?php echo $row['duracion']; ?></p>
+                        <p>Clasificacion: <?php echo $row['clasificacion']; ?></p>
                     </div>
                 </div>                   
                 </div> 
