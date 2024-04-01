@@ -10,7 +10,8 @@
     <body>
         <header class="header">
             <div class="menu container">
-                <a href="index.php" class="logo">CINE SISE</a>            
+
+                <h1 href="index.php" class="logo">CINE SISE</h1>
                 <input type="checkbox" id="menu" />
                 <label for="menu">
                     <img src="images/menu.png" class="menu-icono" alt="menu">
@@ -58,13 +59,14 @@
                                 <img src="<?php echo $row['imagen_url']; ?>" alt="<?php echo $row['titulo']; ?>">
                                 <div class="cinema-info">
                                     <h3><?php echo $row['titulo']; ?></h3>
-                                    <p>Género: <?php echo $row['genero']; ?></p>                             
+                                    <p><?php echo $row['genero'] ?>, <?php echo $row['duracion'] ?>, <?php echo $row['clasificacion'] ?>.</p>              
+                                    <div class="button-container">
+                                        <a href="./VIEWS/Cliente/PeliculaInfo.php?id=<?php echo $row['id_pelicula']; ?>" class="button-link">Ver más</a>                                 
+                                    </div>                             
                                 </div>
-                                <div>                      
-                        <a href="./VIEWS/Cliente/PeliculaInfo.php" class="button-link">Ver más</a>
-                    </div> 
-                            </div>                
-                        </div> 
+                            </div>     
+                        </div>
+
                         <?php $count++; ?>
                         <?php if ($count % 4 == 0) : ?>
                         </div> 
@@ -76,6 +78,7 @@
         </div>
         <div class="load-more" id="load-more-1">Cargar más</div>
     </section>
+
 
     <footer class="footer container">  
 
