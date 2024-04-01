@@ -9,6 +9,6 @@ try {
 }
 
 //  consulta SQL para seleccionar los datos de los cines
-$query = "SELECT id_sucursal, nombre, direccion, telefono, imagen_cine FROM sucursal";
+$query = "SELECT id_sucursal, nombre, direccion, telefono, imagen_url FROM sucursal WHERE estado=1";
 $stmt = $pdo->query($query);
 ?>
