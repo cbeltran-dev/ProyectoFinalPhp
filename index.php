@@ -11,7 +11,7 @@
         <header class="header">
             <div class="menu container">
 
-                <h1 href="index.php" class="logo">CINE SISE</h1>
+                <a href="index.php"><h1 class="logo">CINE SISE</h1></a>
                 <input type="checkbox" id="menu" />
                 <label for="menu">
                     <img src="images/menu.png" class="menu-icono" alt="menu">
@@ -29,10 +29,7 @@
             </div>
             <div class="header-content container">
                 <div class="header-1">
-                    <img src="images/venom.png" alt="">
-                    <div>                      
-                        <a href="./VIEWS/Cliente/PeliculaInfo.php" class="button-link">Ver más</a>
-                    </div> 
+                    <img src="images/venom.png" alt="">                 
                 </div>
                 <div class="header-2">
                     <h1>Las Mejores <br> Películas</h1>
@@ -61,7 +58,8 @@
                                     <h3><?php echo $row['titulo']; ?></h3>
                                     <p><?php echo $row['genero'] ?>, <?php echo $row['duracion'] ?>, <?php echo $row['clasificacion'] ?>.</p>              
                                     <div class="button-container">
-                                        <a href="./VIEWS/Cliente/PeliculaInfo.php?id=<?php echo $row['id_pelicula']; ?>" class="button-link">Ver más</a>                                 
+                                        <a href="./VIEWS/Cliente/Comprar.php?id=<?php echo $row['id_pelicula']; ?>" class="button-link" style="top: 39%;left: 50%;">Comprar</a>
+                                        <a href="./VIEWS/Cliente/PeliculaInfo.php?id=<?php echo $row['id_pelicula']; ?>" class="button-link" >Ver más</a>                               
                                     </div>                             
                                 </div>
                             </div>     

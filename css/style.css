@@ -329,24 +329,19 @@ body{
     margin-top: 10px;
 }
 /*/-------------------------------------*/
-.button-link {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff2f28; /* Color de fondo del botón */
-    color: #fff; /* Color del texto */
-    text-decoration: none; /* Quitamos el subrayado del enlace */
-    border-radius: 5px; /* Añadimos bordes redondeados */
-    transition: background-color 0.3s; /* Efecto de transición al pasar el ratón */
-}
 
-.button-link:hover {
-    background-color: #ff2f28; /* Cambio de color al pasar el ratón */
-}
-       .cinema-card {
+
+/* Boton Ver Mas */
+.cinema-card {
     position: relative;
     display: inline-block;
 }
 
+
+.button-link:hover {
+    background-color: #ff2f28; /* Cambio de color al pasar el ratón */
+}
+       
 .button-link {
     position: absolute;
     top: 50%;
@@ -364,8 +359,6 @@ body{
 .cinema-card:hover .button-link {
     opacity: 1;
 }
-
-
 
 
 
