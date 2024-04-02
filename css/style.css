@@ -28,6 +28,15 @@ body{
         display: flex;
         align-items: center;
     }
+    .header2{
+        
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+    }
 
     .menu{
         position: absolute;
@@ -360,14 +369,28 @@ body{
     opacity: 1;
 }
 
+/*------------------------------------------------*/
+.menu.container {
+    border-bottom: 2px solid #000; /* Ajusta el grosor y color del borde según tu preferencia */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #red; /* Ajusta el color de fondo según tu preferencia */
+    z-index: 999; /* Asegura que la barra de navegación esté por encima de otros elementos */
+}
 
+.menu.container .navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
-    
-      
+.menu.container .navbar ul li {
+    display: inline-block;
+    margin-right: 20px; /* Espacio entre elementos de la lista */
+}
 
-    
-
-
-
-    
-      
+.menu.container .navbar ul li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento de la lista */
+}

@@ -17,7 +17,7 @@
                     <img src="images/menu.png" class="menu-icono" alt="menu">
                 </label>
                 <nav class="navbar">
-                    <ul>
+                    <ul>                       
                         <li><a href="#">INICIO</a></li>
                         <li><a href="VIEWS/Cliente/Cine.php">CINES</a></li>
                         <li><a href="#">PELICULAS</a></li>
