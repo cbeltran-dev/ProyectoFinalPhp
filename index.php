@@ -3,14 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CineMtropolitano</title>
+        <link rel="icon" type="image/png" href="icons/favicon-32x32.png">
+        <title>Cine Sise</title>
         <link rel="stylesheet" href="css/style.css">
 
     </head>
     <body>
         <header class="header">
             <div class="menu container">
-
                 <a href="index.php"><h1 class="logo">CINE SISE</h1></a>
                 <input type="checkbox" id="menu" />
                 <label for="menu">
@@ -18,15 +18,28 @@
                 </label>
                 <nav class="navbar">
                     <ul>                       
-                        <li><a href="#">INICIO</a></li>
+                        <li><a href="index.php">INICIO</a></li>
                         <li><a href="VIEWS/Cliente/Cine.php">CINES</a></li>
                         <li><a href="#">PELICULAS</a></li>
                         <li><a href="#">NOSOTROS</a></li>
                         <li><a href="#">CONTACTO</a></li>
                     </ul>
                 </nav>
-                <a href="VIEWS/Cliente/Login/Login.php" class="btn-1">Login</a>
+                
+                <?php
+                session_start();
+                if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true)
+                {
+                    echo '<a href="views/cliente/login/frmActualizarCliente.php?id_usuario=' . $_SESSION["id_usuario"] . '" class="btn-1" style="margin-left:-129px">Cuenta</a>';
+                    echo '<a href="views/cliente/LogicaPHP/Logout.php" class="btn-1" style="margin-left:-200px">Logout</a>';
+                }
+                else
+                {
+                    echo '<a href="VIEWS/Cliente/login/frmLogin.php" class="btn-1">Login</a>';
+                }
+                ?>
             </div>
+            <a href=""></a>
             <div class="header-content container">
                 <div class="header-1">
                     <img src="images/venom.png" alt="">                 
@@ -59,7 +72,7 @@
                                     <p><?php echo $row['genero'] ?>, <?php echo $row['duracion'] ?>, <?php echo $row['clasificacion'] ?>.</p>              
                                     <div class="button-container">
                                         <a href="./VIEWS/Cliente/Comprar.php?id=<?php echo $row['id_pelicula']; ?>" class="button-link" style="top: 39%;left: 50%;">Comprar</a>
-                                        <a href="./VIEWS/Cliente/PeliculaInfo.php?id=<?php echo $row['id_pelicula']; ?>" class="button-link" >Ver más</a>                               
+                                        <a href="./VIEWS/Cliente/PeliculaInfo.php?id=<?php echo $row['id_pelicula']; ?>" class="button-link" >Ver Más</a>                               
                                     </div>                             
                                 </div>
                             </div>     
@@ -76,13 +89,11 @@
         </div>
         <div class="load-more" id="load-more-1">Cargar más</div>
     </section>
-
-
     <footer class="footer container">  
 
         <h3>CINE METROPOLITANO</h3>
         <ul>
-            <li><a href="#">INICIO</a></li>
+            <li><a href="index.php">INICIO</a></li>
             <li><a href="VIEWS/Cliente/Cine.php">CINES</a></li>
             <li><a href="index.php">PELICULAS</a></li>
             <li><a href="#">NOSOTROS</a></li>

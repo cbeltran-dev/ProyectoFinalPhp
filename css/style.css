@@ -122,6 +122,8 @@ body{
         background-color: #ff2f28;
         color: #ffffff;
         font-size: 20px;
+        border-radius: 5px;
+        
 
     }
 
@@ -340,7 +342,7 @@ body{
 /*/-------------------------------------*/
 
 
-/* Boton Ver Mas */
+/* Boton*/
 .cinema-card {
     position: relative;
     display: inline-block;
@@ -367,6 +369,23 @@ body{
 
 .cinema-card:hover .button-link {
     opacity: 1;
+    
+}
+
+.button-buy {
+    position: absolute;
+    top: 40%;
+    left: 41.5%;
+    background-color: #ff2f28;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button-buy:hover {
+    background-color: #ff5b54;
 }
 
 /*------------------------------------------------*/
@@ -394,3 +413,4 @@ body{
 .menu.container .navbar ul li:last-child {
     margin-right: 0; /* Elimina el margen derecho del último elemento de la lista */
 }
+

@@ -25,16 +25,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["nombre"] = $row["nombre"];
                 $_SESSION["apellido"] = $row["apellido"];
                 
-                
                 if ($_SESSION["id_rol"] == 1) {
                     header("Location: ../../Administrador/PagePrincipal.php");
                 } elseif ($_SESSION["id_rol"] == 2) {
-                    header("Location: ../../../index.php");
+                    $_SESSION["logged_in"] = true;
+                    header("Location: ../../../index.php");             
                 }
                 exit();
             } else {
-                $error = "Usuario o contraseña incorrectos.";
-                header("Location: login.php?error=$error");
+                $_SESSION["error_message"] = "Usuario o contraseña incorrectos.";
+                header("Location: ../login/frmLogin.php");
                 exit();
             }
         } catch (PDOException $ex) {
@@ -48,5 +48,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 }
-
-
+?>

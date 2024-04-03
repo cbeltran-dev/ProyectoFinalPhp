@@ -107,6 +107,12 @@
                         </div>
                     </div>
                     <div class="form-group row">
+                        <label for="trailer" class="col-sm-2 col-form-label">Trailer(opcional):</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="clasificacion" name="trailer_url" placeholder="Ingresar URL">
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <div class="col-sm-10 offset-sm-2">
                             <button type="submit" class="btn btn-primary">Guardar Película</button>
                         </div>

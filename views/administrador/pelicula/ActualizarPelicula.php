@@ -8,6 +8,7 @@ $pelicula = array(
     "sinopsis" => $_POST["sinopsis"],
     "duracion" => $_POST["duracion"],
     "clasificacion" => $_POST["clasificacion"],
+    "trailer_url" => $_POST["trailer_url"],
     "id_pelicula" => $_POST["id_pelicula"],
     
 );
