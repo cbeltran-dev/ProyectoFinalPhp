@@ -46,7 +46,6 @@
                 </div>
                 <div class="header-2">
                     <h1>Las Mejores <br> Películas</h1>
-                    <img src="images/play.png" alt="">
                 </div>
             </div>
         </header>

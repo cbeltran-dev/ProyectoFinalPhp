@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+}
+footer {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.banner-principal {
+    width: calc(33.333% - 20px); /* Ancho de la columna - margen */
+    float: left;
+    padding: 20px;
+}
+.banner-principal img {
+    max-width: 80%; /* Reducir el ancho de la imagen */
+    display: block;
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+}
+.banner-principal h2, .banner-principal p {
+    text-align: center; /* Centrar el texto */
+}
+.filtro-sucursales, .horarios-salas, .selector-entrada {
+    width: calc(33.333% - 20px); /* Ancho de la columna - margen */
+    float: left;
+    margin: 20px 10px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+}
+.filtro-sucursales select, .selector-entrada input[type="number"] {
+    width:40px; /* Ajustar el ancho */
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border-bottom: 1px solid #555;
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #333;
+}
+td {
+    background-color: #444;
+}
+.cantidad-container {
+    display: flex;
+    padding: 10px 10px;
+    align-items: center;
+}
+.cantidad-container button {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    margin: 0 5px;
+}
+.label-a{
+    padding-left: 40px;
+    padding-right: 100px;
+}
+.label-n{
+    padding-left: 40px;
+    padding-right: 112px;
+}

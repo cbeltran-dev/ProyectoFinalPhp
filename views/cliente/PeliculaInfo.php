@@ -6,7 +6,6 @@
         <link rel="icon" type="image/png" href="../../icons/favicon-32x32.png">
         <title>Películas</title>
         <link rel="stylesheet" href="../../css/style.css">
-
     </head>
     <style>
         .cinema-card {
