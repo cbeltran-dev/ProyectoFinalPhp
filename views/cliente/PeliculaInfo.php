@@ -48,8 +48,7 @@
                 <nav class="navbar">
                     <ul>
                         <li><a href="../../index.php">INICIO</a></li>
-                        <li><a href="../cliente/Cine.php">CINES</a></li>
-                        <li><a href="#">PELICULAS</a></li>
+                        <li><a href="../cliente/Cine.php">CINES</a></li>                       
                         <li><a href="#">NOSOTROS</a></li>
                         <li><a href="#">CONTACTO</a></li>
                     </ul>
@@ -89,7 +88,7 @@
                     <h1><?php echo $p['titulo']; ?></h1>
                     <p><strong>Género:</strong> <?php echo $p['genero']; ?></p>
                     <p style="margin-right: 350px;"><strong>Sinopsis:</strong> <?php echo $p['sinopsis']; ?></p>
-                    <a href="#" class="load-more" id="load-more-1" style="position: absolute;top: 30%;left: 41.5%;">Comprar</a>
+                    <a href="compra/frmCompra.php" class="load-more" id="load-more-1" style="position: absolute;top: 30%;left: 41.5%;">Comprar</a>
                 </div>
 <?php } ?>
         </div>

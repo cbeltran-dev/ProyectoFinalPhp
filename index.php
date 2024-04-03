@@ -20,7 +20,7 @@
                     <ul>                       
                         <li><a href="index.php">INICIO</a></li>
                         <li><a href="VIEWS/Cliente/Cine.php">CINES</a></li>
-                        <li><a href="#">PELICULAS</a></li>
+                        
                         <li><a href="#">NOSOTROS</a></li>
                         <li><a href="#">CONTACTO</a></li>
                     </ul>
@@ -71,7 +71,7 @@
                                     <h3><?php echo $row['titulo']; ?></h3>
                                     <p><?php echo $row['genero'] ?>, <?php echo $row['duracion'] ?>, <?php echo $row['clasificacion'] ?>.</p>              
                                     <div class="button-container">
-                                        <a href="./VIEWS/Cliente/Comprar.php?id=<?php echo $row['id_pelicula']; ?>" class="button-link" style="top: 39%;left: 50%;">Comprar</a>
+                                        <a href="./VIEWS/Cliente/compra/frmCompra.php?id=<?php echo $row['id_pelicula']; ?>" class="button-link" style="top: 39%;left: 50%;">Comprar</a>
                                         <a href="./VIEWS/Cliente/PeliculaInfo.php?id=<?php echo $row['id_pelicula']; ?>" class="button-link" >Ver Más</a>                               
                                     </div>                             
                                 </div>
