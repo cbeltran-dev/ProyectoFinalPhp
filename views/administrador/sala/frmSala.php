@@ -64,7 +64,7 @@
                     <div class="form-group">
                         <label for="cboSucursal">Sucursales:</label>
                         <select class="form-control" id="cboSucursal" name="cboSucursal" required>
-                            <option value="">Seleccionar Sala</option>
+                            <option value="">Seleccionar Sucursal</option>
                             <?php
                             include_once '../../../BL/SucursalBL.php';
                             $sucrusalbl = new SucursalBL();

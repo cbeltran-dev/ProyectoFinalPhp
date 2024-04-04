@@ -17,29 +17,13 @@
                 padding: 20px;
                 text-align: center;
             }
-            footer {
-                background-color: #222;
-                padding: 20px;
-                text-align: center;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
             .banner-principal {
-                width: calc(33.333% - 20px); /* Ancho de la columna - margen */
+                width: calc(33.333% - 20px);
                 float: left;
                 padding: 20px;
             }
-            .banner-principal img {
-                max-width: 80%; /* Reducir el ancho de la imagen */
-                display: block;
-                margin: 0 auto; /* Centrar la imagen horizontalmente */
-            }
-            .banner-principal h2, .banner-principal p {
-                text-align: center; /* Centrar el texto */
-            }
             .filtro-sucursales, .horarios-salas, .selector-entrada {
-                width: calc(33.333% - 20px); /* Ancho de la columna - margen */
+                width: calc(33.333% - 20px);
                 float: left;
                 margin: 20px 10px;
                 padding: 20px;
@@ -47,7 +31,7 @@
                 border-radius: 10px;
             }
             .filtro-sucursales select, .selector-entrada input[type="number"] {
-                width:40px; /* Ajustar el ancho */
+                width: 40px;
                 padding: 10px;
                 border: 1px solid #555;
                 border-radius: 5px;
@@ -81,14 +65,13 @@
                 border: none;
                 border-radius: 5px;
                 cursor: pointer;
-
                 margin: 0 5px;
             }
-            .label-a{
+            .label-a {
                 padding-left: 40px;
                 padding-right: 100px;
             }
-            .label-n{
+            .label-n {
                 padding-left: 40px;
                 padding-right: 112px;
             }
@@ -110,9 +93,16 @@
         <div class="filtro-sucursales">
             <label for="sucursal">Sucursal:</label>
             <select id="sucursal" style="width: 350px">
-                <option value="">Todas las sucursales</option>
-                <option value="sucursal1">Sucursal 1</option>
-                <option value="sucursal2">Sucursal 2</option>
+                <option value="">Se     leccionar Sucursal</option>
+                <?php
+                include_once '../../../dao/SucursalDAO.php';
+                $id_pelicula = $_GET["id"];
+                $sucrusalbl = new SucursalDAO();
+                $resultsucur = $sucrusalbl->listasucur($id_pelicula);
+                foreach ($resultsucur as $objSala) {
+                    echo '<option value="' . $objSala['id_sucursal'] . '">' . $objSala['nombre'] . '</option>';
+                }
+                ?>
             </select>
         </div>
 
@@ -139,30 +129,24 @@
                     <th>Horario</th>
                     <th>Comprar entradas</th>
                 </tr>
-                <tr>
-                    <td>2D</td>
-                    <td>16:50</td>
-                    <td><a href="#">Comprar</a></td>
-                </tr>
-                <tr>
-                    <td>3D</td>
-                    <td>19:20</td>
-                    <td><a href="#">Comprar</a></td>
-                </tr>
-                <tr>
-                    <td>2D</td>
-                    <td>21:50</td>
-                    <td><a href="#">Comprar</a></td>
-                </tr>
-                <tr>
-                    <td>3D</td>
-                    <td>22:30</td>
-                    <td><a href="#">Comprar</a></td>
-                </tr>
+                <?php
+                
+                $horario = $sucrusalbl->listasucur($id_pelicula);
+                foreach ($horario as $uwu) {
+                    
+
+                    echo '<tr>';
+
+                    echo '<td>' . $uwu['tipo_sala'] . '</td>';
+                    echo '<td>' . $uwu['horario'] . '</td>';
+
+                    echo '</tr>';
+                }
+                ?>
             </table>
         </div>
 
-        
+
 
         <script>
             function incrementar(tipo) {
@@ -174,7 +158,8 @@
                 const input = document.getElementById(tipo);
                 input.stepDown();
             }
+
+
         </script>
     </body>
-    
 </html>

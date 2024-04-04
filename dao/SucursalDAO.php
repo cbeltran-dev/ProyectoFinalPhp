@@ -1,16 +1,17 @@
 
 <?php
 
-/* 
+/*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
  */
 
 include 'ConexionDAO.php';
 include_once '../../../ENTITY/Sucursal.php';
-class SucursalDAO{
-   
-   function save($sucursal) {
+
+class SucursalDAO {
+
+    function save($sucursal) {
         $database = new ConexionDAO();
         $db = $database->OpenConexion();
         try {
@@ -30,9 +31,8 @@ class SucursalDAO{
             throw new Exception("Error al guardar la sucursal: " . $ex->getMessage());
         }
     }
-    
-    function guardarImagen()
-    {
+
+    function guardarImagen() {
         $rutaGuardarFoto = "../../../views/administrador/uploads/";
         $nombreUnicoArchivo = uniqid() . "_" . $_FILES["imagen_url"]["name"];
         $rutaCompleta = $rutaGuardarFoto . $nombreUnicoArchivo;
@@ -42,32 +42,30 @@ class SucursalDAO{
         return $nombreUnicoArchivo;
     }
 
-
     function actualizar($sucursal) {
-    $database = new ConexionDAO();
-    $db =  $database->OpenConexion();
-    try {
-        
+        $database = new ConexionDAO();
+        $db = $database->OpenConexion();
+        try {
 
-        $sql = "UPDATE sucursal SET nombre = :nombre, direccion = :direccion, telefono = :telefono  WHERE id_sucursal = :id_sucursal";
 
-        $stmt = $db->prepare($sql);
+            $sql = "UPDATE sucursal SET nombre = :nombre, direccion = :direccion, telefono = :telefono  WHERE id_sucursal = :id_sucursal";
 
-        $stmt->bindParam(":nombre", $sucursal["nombre"], PDO::PARAM_STR);
-        $stmt->bindParam(":direccion", $sucursal["direccion"], PDO::PARAM_STR);
-        $stmt->bindParam(":telefono", $sucursal["telefono"], PDO::PARAM_STR);
-        $stmt->bindParam(":id_sucursal", $sucursal["id_sucursal"], PDO::PARAM_INT);
-        
-        
-        $stmt->execute();
+            $stmt = $db->prepare($sql);
 
-        echo "sucursal actualizada exitosamente.";
-    } catch (Exception $ex) {
-        echo $ex->getMessage();
+            $stmt->bindParam(":nombre", $sucursal["nombre"], PDO::PARAM_STR);
+            $stmt->bindParam(":direccion", $sucursal["direccion"], PDO::PARAM_STR);
+            $stmt->bindParam(":telefono", $sucursal["telefono"], PDO::PARAM_STR);
+            $stmt->bindParam(":id_sucursal", $sucursal["id_sucursal"], PDO::PARAM_INT);
+
+            $stmt->execute();
+
+            echo "sucursal actualizada exitosamente.";
+        } catch (Exception $ex) {
+            echo $ex->getMessage();
+        }
     }
-  }
-  
-   function listar() {
+
+    function listar() {
         $database = new ConexionDAO();
         $db = $database->openConexion();
         try {
@@ -79,7 +77,7 @@ class SucursalDAO{
             echo $exc->getMessage();
         }
     }
-    
+
     function buscarId($id) {
         $database = new ConexionDAO();
         $db = $database->openConexion();
@@ -93,7 +91,7 @@ class SucursalDAO{
             echo $exc->getMessage();
         }
     }
-    
+
     function eliminar($id) {
         $database = new ConexionDAO();
         $db = $database->openConexion();
@@ -106,4 +104,24 @@ class SucursalDAO{
             echo $exc->getMessage();
         }
     }
+
+    FUNCTION listasucur($id) {
+        $database = new ConexionDAO();
+        $db = $database->openConexion();
+        try {
+            $sql = "
+                 SELECT DISTINCT s.id_sucursal, s.nombre, f.horario, sa.tipo_sala
+                 FROM sucursal s
+                 INNER JOIN sala sa ON s.id_sucursal = sa.id_sucursal
+                 INNER JOIN funcion f ON sa.id_sala = f.id_sala
+                 WHERE f.id_pelicula = :id_pelicula";
+            $stmt = $db->prepare($sql);
+            $stmt->bindParam(":id_pelicula", $id);
+            $stmt->execute();
+            return $stmt->fetchAll();
+        } catch (Exception $exc) {
+            echo $exc->getMessage();
+        }
+    }
+
 }
