@@ -3,11 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/XAAMPPP/htdocs/ProyectoFinalPhp/views/administrador/funcion/GuardarFuncion.php</file>
-            <file>file:/F:/XAAMPPP/htdocs/ProyectoFinalPhp/views/cliente/compra/frmCompra.php</file>
-            <file>file:/F:/XAAMPPP/htdocs/ProyectoFinalPhp/dao/ObtnerCompra.php</file>
-            <file>file:/F:/XAAMPPP/htdocs/ProyectoFinalPhp/dao/ObtenerPeliculas.php</file>
-            <file>file:/F:/XAAMPPP/htdocs/ProyectoFinalPhp/views/administrador/funcion/frmFuncion.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoFinalPhp/views/cliente/compra/frmRealizarCompra.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoFinalPhp/views/cliente/compra/frmCompra.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoFinalPhp/bl/DetalleCompraBL.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoFinalPhp/views/cliente/compra/RealizarCompra.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoFinalPhp/bl/CompraBL.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoFinalPhp/views/administrador/funcion/GuardarFuncion.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoFinalPhp/dao/DetalleCompraDAO.php</file>
+            <file>file:/C:/xampp/htdocs/ProyectoFinalPhp/dao/CompraDAO.php</file>
         </group>
     </open-files>
 </project-private>

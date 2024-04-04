@@ -110,7 +110,7 @@ class SucursalDAO {
         $db = $database->openConexion();
         try {
             $sql = "
-                 SELECT DISTINCT f.horario, sa.tipo_sala
+                 SELECT DISTINCT f.id_funcion, f.horario, sa.tipo_sala
                  FROM sucursal s
                  INNER JOIN sala sa ON s.id_sucursal = sa.id_sucursal
                  INNER JOIN funcion f ON sa.id_sala = f.id_sala

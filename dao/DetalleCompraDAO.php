@@ -1,11 +1,11 @@
 
 <?php
-include 'ConexionDAO.php';
-include_once '../entity/DetalleCompra.php';
+include_once 'ConexionDAO.php';
+include_once '../../../entity/DetalleCompra.php';
 
 
 class DetalleCompraDAO {
-  function listarRol() {
+  function listarDetalleCompra() {
         $database = new ConexionDAO();
         $db = $database->openConexion();
         try {
@@ -18,7 +18,7 @@ class DetalleCompraDAO {
         }
     }
 
-    function buscarId($id) {
+    function buscarDetalleCompra($id) {
         $database = new ConexionDAO();
         $db = $database->openConexion();
         try {
@@ -31,7 +31,7 @@ class DetalleCompraDAO {
             echo $exc->getMessage();
         }
     }
-    function saveRol($rol) {
+    function saveDetalleCompra($detalle) {
         $database = new ConexionDAO();
         $db = $database->OpenConexion();
         try {
