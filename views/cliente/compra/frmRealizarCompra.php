@@ -78,7 +78,7 @@
                     <input type="hidden" name="tipo_sala" value="<?php echo $_GET['tipo_sala'] ?>">
                 </div>
                 <div class="boton-container boton-comprar">
-                    <button class="boton-comprar" type="submit">COMPRAR</button>
+                    <button class="boton-comprar" type="submit">CONFIRMAR COMPRA</button>
                 </div>
             </div>
 
