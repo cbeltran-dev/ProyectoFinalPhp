@@ -149,7 +149,7 @@
                     <tr>
                         <td><?php echo $funcion['tipo_sala'] ?></td>
                         <td><?php echo $funcion['horario'] ?></td>
-                        <td><a href="realizarCompra.php">Comprar</a></td>
+                        <td><a href="RealizarCompra.php">Comprar</a></td>
                     </tr>
                     <?php
                 }
