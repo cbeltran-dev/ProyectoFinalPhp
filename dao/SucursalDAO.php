@@ -105,12 +105,32 @@ class SucursalDAO {
         }
     }
 
-    FUNCTION listasucur($id) {
+    FUNCTION listarHorarios($id_sucursal, $id_pelicula) {
         $database = new ConexionDAO();
         $db = $database->openConexion();
         try {
             $sql = "
-                 SELECT DISTINCT s.id_sucursal, s.nombre, f.horario, sa.tipo_sala
+                 SELECT DISTINCT f.horario, sa.tipo_sala
+                 FROM sucursal s
+                 INNER JOIN sala sa ON s.id_sucursal = sa.id_sucursal
+                 INNER JOIN funcion f ON sa.id_sala = f.id_sala
+                 WHERE f.id_pelicula = :id_pelicula and s.id_sucursal =:id_sucursal";
+            $stmt = $db->prepare($sql);
+            $stmt->bindParam(":id_pelicula", $id_pelicula);
+            $stmt->bindParam(":id_sucursal", $id_sucursal);
+            $stmt->execute();
+            return $stmt->fetchAll();
+        } catch (Exception $exc) {
+            echo $exc->getMessage();
+        }
+    }
+    
+    FUNCTION filtrarSucursalPorPelicula($id) {
+        $database = new ConexionDAO();
+        $db = $database->openConexion();
+        try {
+            $sql = "
+                 SELECT DISTINCT s.id_sucursal, s.nombre
                  FROM sucursal s
                  INNER JOIN sala sa ON s.id_sucursal = sa.id_sucursal
                  INNER JOIN funcion f ON sa.id_sala = f.id_sala
