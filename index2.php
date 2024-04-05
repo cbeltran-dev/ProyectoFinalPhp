@@ -6,6 +6,7 @@
         <title>CineMtropolitano</title>
         <!--        <link rel="stylesheet" href="css/stylecines.css">-->
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/stylecines.css">
     </head>
     <body>
         <header class="header">
