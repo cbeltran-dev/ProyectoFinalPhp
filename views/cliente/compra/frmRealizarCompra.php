@@ -46,14 +46,14 @@
         ?>
         <div class="banner-principal">
             <?php
-            foreach ($pelicompra as $pelicompra1)
-            {
+            foreach ($pelicompra as $pelicompra1) {
                 ?>
                 <img src="<?php echo "../../../" . $pelicompra1['imagen_url']; ?>"alt="<?php echo $pelicompra1['titulo'] ?>">
-                <h2><?php echo $pelicompra1['titulo'] ?></h2>
-                <p><?php echo $pelicompra1['clasificacion'] ?> | <?php echo $pelicompra1['duracion'] ?> | Jue. 04 Abr. 2024</p>
-                <p>Género: <?php echo $pelicompra1['genero'] ?></p>
+                <h2 style="color:red; font-size: 30px;font-family: serif"><?php echo $pelicompra1['titulo'] ?></h2>
+    <!--            <p><?php //echo $pelicompra1['clasificacion']  ?> | <?php //echo $pelicompra1['duracion']  ?> | Jue. 04 Abr. 2024</p>
+                <p>Género: <?php //echo $pelicompra1['genero']  ?></p>-->
     <!--            <p>Sinopsis: La batalla épica continúa! La película de Legendary Pictures continúa el explosivo...</p>-->
+                <p style="color:white; font-family: fantasy ">Fecha  :  <?php echo " " . date("d/m/Y") ?></p>
             <?php } ?>
         </div>
         <form style="text-align: center" action="RealizarCompra.php" method="post">

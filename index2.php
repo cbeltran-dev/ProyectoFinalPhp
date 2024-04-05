@@ -17,7 +17,7 @@
                 </label>
                 <nav class="navbar">
                     <ul>
-                        <li><a href="#">INICIO</a></li>
+                        <li><a href="index.php">INICIO</a></li>
                         <li><a href="../../VIEWS/Cliente/Cine.php">CINES</a></li>
                         <li><a href="../../index.php">PELÍCULAS</a></li>
                         <li><a href="#">NOSOTROS</a></li>
@@ -89,8 +89,9 @@
     <footer class="footer container">  
         <h3>CINE METROPOLITANO</h3>
         <ul>
-            <li><a href="#">INICIO</a></li>
-            <li><a href="#">PELÍCULAS</a></li>
+            <li><a href="index.php">INICIO</a></li>
+            <li><a href="views/cliente/Cine.php">CINES</a></li>
+            <li><a href="index.php">PELÍCULAS</a></li>
             <li><a href="#">NOSOTROS</a></li>
             <li><a href="#">CONTACTO</a></li>
         </ul>
