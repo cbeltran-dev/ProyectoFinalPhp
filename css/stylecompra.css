@@ -36,7 +36,7 @@ footer {
     float: left;
     margin: 20px 10px;
     padding: 20px;
-    background-color: #222;
+    background-color: #black;
     border-radius: 10px;
 }
 .filtro-sucursales select, .selector-entrada input[type="number"] {
@@ -45,7 +45,7 @@ footer {
     border: 1px solid #555;
     border-radius: 5px;
     font-size: 16px;
-    background-color: #333;
+    background-color: black;
     color: white;
 }
 table {
@@ -58,10 +58,10 @@ th, td {
     text-align: left;
 }
 th {
-    background-color: #333;
+    background-color: black;
 }
 td {
-    background-color: #444;
+    background-color: black;
 }
 .cantidad-container {
     display: flex;
@@ -78,12 +78,12 @@ td {
     margin: 0 5px;
 }
 .label-a{
-    padding-left: 40px;
-    padding-right: 100px;
+    padding-left: 120px;
+    padding-right: 10px;
 }
 .label-n{
-    padding-left: 40px;
-    padding-right: 112px;
+    padding-left: 120px;
+    padding-right: 22px;
 }
 
 
