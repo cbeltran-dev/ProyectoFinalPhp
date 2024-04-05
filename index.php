@@ -25,7 +25,7 @@
                         <li><a href="#">CONTACTO</a></li>
                     </ul>
                 </nav>
-                
+
                 <?php
                 session_start();
                 if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true)
@@ -70,22 +70,32 @@
                                     <h3><?php echo $row['titulo']; ?></h3>
                                     <p><?php echo $row['genero'] ?>, <?php echo $row['duracion'] ?>, <?php echo $row['clasificacion'] ?>.</p>              
                                     <div class="button-container">
-                                        <a href="./VIEWS/Cliente/compra/frmCompra.php?id=<?php echo $row['id_pelicula']; ?>&id_usuario=<?php echo $_SESSION['id_usuario']; ?>" class="button-link" style="top: 39%;left:50%;">Comprar</a>
+                                        <?php
+                                        if (isset($_SESSION["logged_in"]) && $_SESSION["logged_in"] === true)
+                                        {
+                                            echo '<a href="./VIEWS/Cliente/compra/frmCompra.php?id=' . $row['id_pelicula'] . '&id_usuario=' . $_SESSION['id_usuario'] . '" class="button-link" style="top: 39%;left:50%;">Comprar</a>';
+                                            echo '<a href="./VIEWS/Cliente/PeliculaInfo.php?id=' . $row['id_pelicula'] . '&id_usuario=' . $_SESSION['id_usuario'] . '" class="button-link">Ver Más</a>';
+                                        }
+                                        else
+                                        {
+                                            echo '<a href="./VIEWS/Cliente/compra/frmCompra.php?id=' . $row['id_pelicula'] . '" class="button-link" style="top: 39%;left:50%;">Comprar</a>';
+                                            echo '<a href="./VIEWS/Cliente/PeliculaInfo.php?id=' . $row['id_pelicula'] . '" class="button-link">Ver Más</a>';
+                                        }
+                                        ?>
+                                    </div>
 
-                                        <a href="./VIEWS/Cliente/PeliculaInfo.php?id=<?php echo $row['id_pelicula']; ?>&id_usuario=<?php echo $_SESSION['id_usuario']; ?>" class="button-link" >Ver Más</a>                               
-                                    </div>                             
                                 </div>
                             </div>     
                         </div>
 
-                        <?php $count++; ?>
-                        <?php if ($count % 4 == 0) : ?>
+                    <?php $count++; ?>
+                    <?php if ($count % 4 == 0) : ?>
                         </div> 
-                    <?php endif; ?>
-                <?php endwhile; ?>    
-                <?php if ($count % 4 != 0) : ?>
+                <?php endif; ?>
+            <?php endwhile; ?>    
+<?php if ($count % 4 != 0) : ?>
                 </div> 
-            <?php endif; ?>               
+<?php endif; ?>               
         </div>
         <div class="load-more" id="load-more-1">Cargar más</div>
     </section>
